@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 id="title">Form Input Data Penulis</h1>
+  <p class="lead">List Penulis</p>
+  <a href="/list_penulis" class="btn btn-primary mb-3">List Penulis</a>
+  <form id="penulis-form" method="POST" action="/penulis" class="form">
+    <div class="form-group">
+      <label for="nama_penulis">Nama Penulis</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nama_penulis"
+        name="nama_penulis"
+        placeholder="Masukkan Nama Penulis"
+        required />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Edit Buku</h1>
+    <form id="form-edit-buku" method="POST" action="/buku/edit/{{ buku._id }}" class="form">
+        <div class="form-group">
+            <label for="judul_buku">Judul Buku</label>
+            <input type="text" class="form-control" id="judul_buku" name="judul" value="{{ buku.judul }}" required>
+        </div>
+        <div class="form-group">
+            <label for="penulis">Penulis</label>
+            <select class="form-control" id="penulis" name="penulis" required>
+                {% for penulis in penulis_list %}
+                <option value="{{ penulis._id }}" {% if penulis._id == buku.penulis._id %} selected {% endif %}>{{ penulis.nama_penulis }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="penerbit">Penerbit</label>
+            <select class="form-control" id="penerbit" name="penerbit" required>
+                {% for penerbit in penerbit_list %}
+                <option value="{{ penerbit._id }}" {% if penerbit._id == buku.penerbit._id %} selected {% endif %}>{{ penerbit.nama_penerbit }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tahun_terbit">Tahun Terbit</label>
+            <input type="number" class="form-control" id="tahun_terbit" name="tahun_terbit" value="{{ buku.tahun_terbit }}" required>
+        </div>
+        <div class="form-group">
+            <label for="kota">Kota</label>
+            <select class="form-control" id="kota" name="kota" required>
+                {% for kota in kota_list %}
+                <option value="{{ kota._id }}" {% if kota._id == buku.kota._id %} selected {% endif %}>{{ kota.nama_kota }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sinopsis">Sinopsis</label>
+            <textarea class="form-control" id="sinopsis" name="sinopsis" rows="3" required>{{ buku.sinopsis }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="jumlah_halaman">Jumlah Halaman</label>
+            <input type="number" class="form-control" id="jumlah_halaman" name="jumlah_halaman" value="{{ buku.jumlah_halaman }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

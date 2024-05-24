@@ -1,0 +1,26 @@
+<!-- templates/kota/edit_kota.html -->
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 id="title">Edit Data Kota</h1>
+  <p class="lead">Edit Kota</p>
+  <a href="/list_kota" class="btn btn-primary mb-3">Kembali ke Daftar Kota</a>
+  <form
+    id="edit-kota-form"
+    method="POST"
+    action="/edit_kota/{{ kota._id }}"
+    class="form">
+    <div class="form-group">
+      <label for="nama_kota">Nama Kota</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nama_kota"
+        name="nama_kota"
+        placeholder="Masukkan Nama Kota"
+        value="{{ kota.nama_kota }}"
+        required />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
+{% endblock %}

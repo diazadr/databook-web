@@ -1,0 +1,29 @@
+<!-- templates/kota/list_kota.html -->
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 id="title">Daftar Kota</h1>
+  <p class="lead">List Kota</p>
+  <a href="/kota" class="btn btn-primary mb-3">Tambah Kota</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nama Kota</th>
+        <th scope="col">Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for k in kota %}
+      <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <td>{{ k.nama_kota }}</td>
+        <td>
+          <a href="/edit_kota/{{ k._id }}" class="btn btn-primary">Edit</a>
+          <a href="/hapus_kota/{{ k._id }}" class="btn btn-danger">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

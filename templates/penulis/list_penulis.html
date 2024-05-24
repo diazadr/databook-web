@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 id="title">Daftar Penulis</h1>
+  <p class="lead">Input Penulis</p>
+  <a href="/penulis" class="btn btn-primary mb-3">Input Penulis</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nama Penulis</th>
+        <th scope="col">Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in penulis %}
+      <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <td>{{ p.nama_penulis }}</td>
+        <td>
+          <a href="/edit_penulis/{{ p._id }}" class="btn btn-primary">Edit</a>
+          <a href="/delete_penulis/{{ p._id }}" class="btn btn-danger"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

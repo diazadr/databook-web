@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 id="title">Edit Data Penulis</h1>
+  <p class="lead">List Penulis</p>
+  <a href="/list_penulis" class="btn btn-primary mb-3">List Penulis</a>
+  <form
+    id="edit-penulis-form"
+    method="POST"
+    action="/edit_penulis/{{ penulis._id }}"
+    class="form">
+    <div class="form-group">
+      <label for="nama_penulis">Nama Penulis</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nama_penulis"
+        name="nama_penulis"
+        placeholder="Masukkan Nama Penulis"
+        value="{{ penulis.nama_penulis }}"
+        required />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
+{% endblock %}

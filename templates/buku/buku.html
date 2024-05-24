@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1>Form Input Buku</h1>
+  <form id="form-buku" method="POST" action="/buku" class="form">
+    <div class="form-group">
+      <label for="judul_buku">Judul Buku</label>
+      <input
+        type="text"
+        class="form-control"
+        id="judul_buku"
+        name="judul_buku"
+        placeholder="Masukkan Judul Buku"
+        required />
+    </div>
+    <div class="form-group">
+      <label for="penulis">Penulis</label>
+      <select class="form-control" id="penulis" name="penulis" required>
+        {% for penulis in penulis_list %}
+        <option value="{{ penulis.nama_penulis }}">
+          {{ penulis.nama_penulis }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="penerbit">Penerbit</label>
+      <select class="form-control" id="penerbit" name="penerbit" required>
+        {% for penerbit in penerbit_list %}
+        <option value="{{ penerbit.nama_penerbit }}">
+          {{ penerbit.nama_penerbit }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="tahun_terbit">Tahun Terbit</label>
+      <input
+        type="number"
+        class="form-control"
+        id="tahun_terbit"
+        name="tahun_terbit"
+        placeholder="Masukkan Tahun Terbit"
+        required />
+    </div>
+    <div class="form-group">
+      <label for="kota">Kota</label>
+      <select class="form-control" id="kota" name="kota" required>
+        {% for kota in kota_list %}
+        <option value="{{ kota.nama_kota }}">{{ kota.nama_kota }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="sinopsis">Sinopsis</label>
+      <textarea
+        class="form-control"
+        id="sinopsis"
+        name="sinopsis"
+        rows="3"
+        placeholder="Masukkan Sinopsis Buku"
+        required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="jumlah_halaman">Jumlah Halaman</label>
+      <input
+        type="number"
+        class="form-control"
+        id="jumlah_halaman"
+        name="jumlah_halaman"
+        placeholder="Masukkan Jumlah Halaman"
+        required />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
+</div>
+
+{% endblock %}

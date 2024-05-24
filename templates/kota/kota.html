@@ -1,0 +1,22 @@
+<!-- templates/kota/tambah_kota.html -->
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 id="title">Form Input Data Kota</h1>
+  <p class="lead">Tambah Kota Baru</p>
+  <a href="/list_kota" class="btn btn-primary mb-3">Kembali ke Daftar Kota</a>
+  <form id="kota-form" method="POST" action="/kota" class="form">
+    <div class="form-group">
+      <label for="nama_kota">Nama Kota</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nama_kota"
+        name="nama_kota"
+        placeholder="Masukkan Nama Kota"
+        required />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+  </form>
+</div>
+{% endblock %}
