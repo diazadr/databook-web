@@ -8,26 +8,26 @@
 
 ---
 
-## Features
+## DEMO
 
 ### **CREATE**
 - The **Create** feature allows users to add new book records.
 
-  ![Create Record](https://github.com/user-attachments/assets/a1f72054-7908-4746-822f-4ff08a7f5a75)
+  ![Create Record](https://github.com/user-attachments/assets/386cdb44-1e27-4bc4-802c-1a6643b37386)
 
 ---
 
 ### **READ**
 - The **Read** feature displays a list of all book records.
 
-  ![View Records](https://github.com/user-attachments/assets/e624ddb2-ff75-438d-8534-9cf82dfdb099)
+  ![View Records](https://github.com/user-attachments/assets/932ab822-632b-4688-8ac2-0c99710ec925)
 
 ---
 
 ### **UPDATE**
 - The **Update** feature lets users modify existing book records.
 
-  ![Update Record](https://github.com/user-attachments/assets/020e49f8-2737-4bc3-9f23-8618f99749e1)
+  ![Update Record](https://github.com/user-attachments/assets/8fa2c476-e95c-47af-bf66-1c2d084c8547)
 
 ---
 
@@ -36,6 +36,10 @@
 
 ---
 
+![image](https://github.com/user-attachments/assets/ff50aca5-ead6-4f57-99c0-ecad74888d0b)
+
+
+---
 ## Technologies Used
 
 - **MongoDB Atlas**: Cloud database for the application.
