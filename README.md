@@ -24,22 +24,22 @@
 ### Create
 - The **Create** feature allows users to add new book records.
 
-  ![Create Record](https://github.com/user-attachments/assets/386cdb44-1e27-4bc4-802c-1a6643b37386)
+  <img src="https://github.com/user-attachments/assets/386cdb44-1e27-4bc4-802c-1a6643b37386" alt="Create Record" width="600">
 
 ### Read
 - The **Read** feature displays a list of all book records.
 
-  ![View Records](https://github.com/user-attachments/assets/932ab822-632b-4688-8ac2-0c99710ec925)
+  <img src="https://github.com/user-attachments/assets/932ab822-632b-4688-8ac2-0c99710ec925" alt="View Records" width="600">
 
 ### Update
 - The **Update** feature lets users modify existing book records.
 
-  ![Update Record](https://github.com/user-attachments/assets/8fa2c476-e95c-47af-bf66-1c2d084c8547)
+  <img src="https://github.com/user-attachments/assets/8fa2c476-e95c-47af-bf66-1c2d084c8547" alt="Update Record" width="600">
 
 ### Delete
 - The **Delete** feature allows users to remove a book record from the system.
 
-  ![Delete Record](https://github.com/user-attachments/assets/ff50aca5-ead6-4f57-99c0-ecad74888d0b)
+  <img src="https://github.com/user-attachments/assets/ff50aca5-ead6-4f57-99c0-ecad74888d0b" alt="Delete Record" width="600">
 
 ## Setup
 
